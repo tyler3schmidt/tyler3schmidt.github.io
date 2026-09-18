@@ -1,16 +1,250 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>My GitHub Pages Site</title>
-<link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tyler Schmidt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F4EE;
+    --ink: #22221E;
+    --muted: #6B6558;
+    --rule: #DAD5C6;
+    --accent: #2F5D8A;
+    --accent-soft: #E7EEF3;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 6rem;
+  }
+
+  header {
+    margin-bottom: 0;
+  }
+
+  .header-row {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .headshot {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+    flex-shrink: 0;
+  }
+
+  h1 {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 2.6rem;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .tagline {
+    font-family: 'Newsreader', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin: 0;
+    max-width: 42ch;
+  }
+
+  .rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2rem 0 0;
+  }
+
+  .links {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+  }
+
+  .links a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+    margin-right: 1.4rem;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  section {
+    margin-bottom: 2.8rem;
+  }
+
+  h2 {
+    font-family: 'Newsreader', serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 0 0 0.9rem;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    max-width: 62ch;
+  }
+
+  .entry {
+    margin-bottom: 1.3rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent-soft);
+  }
+
+  .entry-title {
+    font-weight: 500;
+    margin: 0 0 0.2rem;
+  }
+
+  .entry-meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 0.35rem;
+  }
+
+  .entry-desc {
+    font-size: 0.96rem;
+    margin: 0;
+    max-width: 60ch;
+  }
+
+  .status {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+  }
+
+  footer {
+    color: var(--muted);
+    font-size: 0.88rem;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.4rem;
+  }
+
+  footer a {
+    color: var(--muted);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 2.1rem; }
+    .wrap { padding: 3rem 1.25rem 4rem; }
+    .header-row { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  }
+</style>
 </head>
 <body>
-<main>
-<h1>Hello, GitHub Pages </h1>
-<p>This site is deployed from a GitHub repository.</p>
-</main>
-<script src="main.js"></script>
+<div class="wrap">
+
+  <header>
+    <div class="header-row">
+      <img src="photo.jpg" alt="Tyler Schmidt" class="headshot">
+      <div>
+        <h1>Tyler Schmidt</h1>
+        <p class="tagline">PhD student in Statistics, University of Iowa — Bayesian semiparametrics, reinforcement learning, causal inference, and simulation-based inference.</p>
+      </div>
+    </div>
+    <hr class="rule">
+    <div class="links">
+      <a href="mailto:tyler-schmidt-1@uiowa.edu">Email</a>
+      <a href="https://github.com/tyler3schmidt">GitHub</a>
+      <a href="Tyler_Schmidt_CV.pdf">CV (PDF)</a>
+      <a href="https://scholar.google.com/citations?user=sg-nPxIAAAAJ">Google Scholar</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      I work on calibrated Bayesian methods for sequential decision-making and causal inference, advised by
+      Prof.&nbsp;Nathan&nbsp;Wikle. My research verifies when flexible, computationally efficient Bayesian
+      procedures retain the same asymptotic
+      guarantees as classical efficient estimators, and applies that theory to problems in reinforcement learning and causal inference.
+    </p>
+  </section>
+
+  <section>
+    <h2>Research</h2>
+
+    <div class="entry">
+      <span class="status">under review</span>
+      <p class="entry-title">Calibrated Bayesian Inference for Stochastic Intervention Effects</p>
+      <p class="entry-meta">with Nathan Wikle &middot; Bayesian Analysis</p>
+      <p class="entry-desc">
+        Establishes a Bernstein&ndash;von Mises calibration result for causal effects under stochastic
+        interventions, verified for a soft BART prior.
+      </p>
+    </div>
+
+    <div class="entry">
+      <span class="status">in preparation</span>
+      <p class="entry-title">Semiparametric Posterior Corrections for Off-Policy Evaluation</p>
+      <p class="entry-meta">with Nathan Wikle &middot; targeting arXiv / JMLR</p>
+      <p class="entry-desc">
+        Extends the same calibration argument to off-policy value estimation in offline reinforcement
+        learning.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Software</h2>
+    <div class="entry">
+      <p class="entry-title">semipost</p>
+      <p class="entry-meta"><a href="https://github.com/tyler3schmidt/semipost" style="color:var(--accent)">github.com/tyler3schmidt/semipost</a></p>
+      <p class="entry-desc">
+        An open-source package implementing calibrated Bayesian inference for methods in Bayesian semiparametrics, across prior classes, developed in my research (under construction).
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Teaching</h2>
+    <div class="entry">
+      <p class="entry-title">Teaching Assistant &mdash; STAT 1030: Statistics for Business</p>
+      <p class="entry-meta">University of Iowa &middot; Spring 2026, Fall 2026</p>
+    </div>
+    <div class="entry">
+      <p class="entry-title">Teaching Assistant &mdash; STAT 5200: Applied Statistics I</p>
+      <p class="entry-meta">University of Iowa &middot; Fall 2026</p>
+    </div>
+  </section>
+
+  <footer>
+    Last updated Sep 2026. <a href="Tyler_Schmidt_CV.pdf">Full CV</a> available as PDF.
+  </footer>
+
+</div>
 </body>
 </html>
